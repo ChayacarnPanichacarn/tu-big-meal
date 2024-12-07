@@ -1,0 +1,124 @@
+.filter{
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 85%;
+}
+.filter-symbol{
+    display: flex;
+    align-items: center;
+    /* margin-right: 5px; */
+}
+.filter-symbol svg{
+    font-size: 25px;
+    color: #161616;
+}
+.select-btn-homepage{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.select-btn-homepage .dropdown-menu{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: calc(50% - 15px);
+    cursor: pointer;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(41, 41, 41);
+    /* border: 1px solid rgb(119, 119, 119); */
+    padding: 5px;
+    border-radius: 50%;
+}
+.select-btn-homepage svg{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.select-menu-homepage .options-can, .options-cat{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: rgb(123, 123, 123);
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    gap: 5px;
+    z-index: 2;
+    margin-top: 5px;
+}
+.options-can{
+    width: 150px;
+}
+.options-cat{
+    width: 190px;
+}
+.can-input-homepage, .cat-input-homepage{
+    background: linear-gradient(to right, #ffc6ef, #ffca79);
+    border: 2px solid rgb(97, 97, 97);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+.can-input-homepage:focus, .cat-input-homepage:focus{
+    border: 1.5px solid rgb(95, 95, 95);
+    outline: none;
+}
+.can-input-homepage{
+    width: 150px;
+}
+.cat-input-homepage{
+    width: 190px;
+}
+.select-menu-homepage .options-can .option, .options-cat .option{
+    display: flex;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 5px 15px;
+    align-items: center;
+    background: white;
+    border: none;
+}
+.select-menu-homepage .options-can .option:hover, .options-cat .option:hover{
+    background: rgb(202, 202, 202);
+}
+.options-can .option.option-selected, .options-cat .option.option-selected{
+    background: linear-gradient(to right, pink, #fffbde);
+    border: 1px solid rgb(160, 160, 160);
+}
+@media(max-width: 600px){
+    .filter-symbol svg{
+        font-size: 25px;
+    }
+    .select-btn-homepage svg{
+        font-size: 17px;
+    }
+    .can-input-homepage{
+        width: 130px;
+    }
+    .cat-input-homepage{
+        width: 170px;
+    }
+    .options-can{
+        width: 130px;
+    }
+    .options-cat{
+        width: 170px;
+    }
+    .select-btn-homepage .dropdown-menu{
+        top: calc(50% - 12.5px);
+        width: 25px;
+        height: 25px;
+        right:7px;
+    }
+}

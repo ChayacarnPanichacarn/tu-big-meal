@@ -1,0 +1,394 @@
+
+.edit-shop{
+    max-width: 1170px;
+    overflow-x: hidden;
+    padding: 2rem auto;
+    /* margin: 0 auto; */
+}
+.part1-editInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 30px;
+    width: 100%;
+}
+.edit-shop .imgWrapper{
+    width: 230px;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.3);
+    margin-left: 20px;
+    margin-right: 20px;
+    aspect-ratio: 1;
+    position: relative;
+}
+.edit-shop .imgWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    border-radius: inherit;
+}
+.imgWrapper .edit-shop-button, .edit-banner-button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(202, 202, 202);
+    width:35px;
+    height: 35px;
+    border-radius: 17px;
+    cursor: pointer;
+    border: none;
+}
+.edit-banner-button
+.imgWrapper .edit-shop-button svg, .edit-banner-button svg{
+    font-size: 16px;
+}
+.uploadShop-option, .uploadBanner-option{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 370px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(180, 179, 179);
+    z-index: 3;
+}
+.uploadShop-option{
+    margin-top: 300px;
+}
+.uploadBanner-option{
+    margin-top: 45px;
+}
+.uploadShop-option .closeShop-option, .closeBanner-option{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 3px;
+    border: none;
+    border-radius:  5px;
+    background-color: black;
+}
+.uploadShop-option .closeShop-option svg, .closeBanner-option svg{
+    color: white;
+}
+.uploadShop-option input, .uploadBanner-option input{
+    all: unset;
+    width: 100%;
+}
+.uploadShop-option p, .uploadBanner-option p{
+    text-align: center;
+}
+.browseShop-option, .browseBanner-option{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.urlShop-option, .urlBanner-option{
+    display: flex;
+    flex-direction: row;
+}
+.urlShop-option input, .urlBanner-option input{
+    background-color: white;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+.edit-shop .contentWrapper-edit{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    /* background-color: yellow; */
+}
+.edit-shop .contentWrapper-edit p{
+    align-self: flex-start;
+    padding-left: 15px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.contentWrapper-edit input, .contentWrapper-edit textarea, .select-btn input{
+    background-color: #e5e4e4;
+    border: none;
+    width: 350px;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+}
+.select-btn{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.dropdown-menu{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: calc(50% - 20px);
+    cursor: pointer;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(184, 183, 183);
+    padding: 5px;
+    border-radius: 50%;
+}
+.select-btn svg{
+    font-size: 20px;
+}
+.select-menu .options{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #e5e4e4;
+    border: none;
+    background-color: rgb(223, 221, 221);
+    width: 350px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    gap: 5px;
+    z-index: 2;
+}
+.options .option{
+    display: flex;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 5px 15px;
+    align-items: center;
+    background: #ebeaea;
+    border: 1px solid rgb(178, 178, 178);
+}
+.options .option:hover{
+    background: #ffffff;
+}
+.option.option-selected{
+    background: #c1c1c1;
+    border: 1.5px solid rgb(143, 142, 142);
+}
+.contentWrapper-edit textarea{
+    height: 180px;
+}
+.contentWrapper-edit input:focus, .contentWrapper-edit textarea:focus{
+    outline: none;
+    background-color: #f4f3f3;
+}
+.select-btn input:focus{
+    background-color: #e5e4e4;
+}
+.uploadShop-option input, 
+.urlShop-option input {
+    width: 100%;
+}
+.part2-editInfo{
+    margin: 20px auto;
+}
+.edit-shop h3{
+    font-weight: normal;
+    text-align: center;
+}
+.bannerWrapper{
+    position: relative;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.3);
+}
+.part2-editInfo img{
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+.part3-delivery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.part3-delivery h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.part3-delivery .list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 700px;
+}
+.form-element{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.form-element input{
+    display: none;
+    width: auto;
+    padding: 0;
+}
+.form-element label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid #e3e0e0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 5px 20px 2px #d2d0d0;
+    padding: 5px;
+}
+.form-element .title{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-element .logo img{
+    width: 45px;
+}
+.form-element label::before{
+    content: "✔";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: 5px;
+    background: rgb(255, 82, 47);
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    opacity: 0; 
+    transform: scale(0.5);
+    transition: all 100ms ease-in-out;
+}
+.form-element input:checked + label::before{
+    opacity: 1; 
+    transform: scale(1);
+}
+.form-element input:checked + label{
+    border: 2.5px solid rgb(255, 82, 47);
+}
+.edit-shop .edit-button{
+    display: flex;
+    justify-content: center;
+}
+.edit-shop .edit-button button{
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(255, 171, 75);
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+.edit-shop .edit-button button:hover{
+    background-color: rgb(252, 135, 62);
+}
+
+
+@media(max-width: 700px){
+    .edit-shop{
+        max-width: 650px;
+    }
+    .part1-editInfo{
+       flex-direction: column;
+       align-items: center;
+       row-gap: 30px;
+    }
+    .edit-shop .imgWrapper{
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+    }
+    .bannerWrapper{
+        width: 450px;
+    }
+    .part3-delivery .list{
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 550px){
+    .bannerWrapper{
+        width: 400px;
+    }
+}
+
+@media(max-width: 500px){
+    .edit-shop .imgWrapper{
+        width: 180px;
+        height: 180px;
+        border-radius: 15px;
+    }
+    .imgWrapper .edit-image-button{
+        width:30px;
+        height: 30px;
+    }
+    .imgWrapper .edit-image-button svg{
+        font-size: 14px;
+    }
+    .edit-shop .contentWrapper-edit p{
+        line-height: 20px;
+    }
+    .bannerWrapper{
+        width: 370px;
+    }
+    .part3-delivery .list{
+        max-width: 450px;
+    }
+}
+@media(max-width: 400px){
+
+    .edit-shop .imgWrapper{
+        width: 160px;
+        height: 160px;
+        border-radius: 15px;
+    }
+    .contentWrapper-edit input, .contentWrapper-edit textarea, .select-btn, .select-menu .options{
+        width: 320px;
+    }
+    .edit-shop .contentWrapper-edit p{
+        line-height: 19px;
+    }
+    .bannerWrapper{
+        width: 330px;
+    }
+    .part3-delivery .list{
+        max-width: 300px;
+    }
+}
+@media(max-width: 350px){
+    .contentWrapper-edit input, .contentWrapper-edit textarea, .select-btn, .select-menu .options{
+        width: 260px;
+    }
+    .contentWrapper-edit textarea{
+        height: 220px;
+    }
+}

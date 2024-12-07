@@ -1,0 +1,124 @@
+
+.otp-card{
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 8%;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 10px 10px 15px rgba(61, 61, 61, 0.3);
+}
+.otp-card h1{
+    margin:0;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.otp-card-input{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+    gap: 30px;
+    justify-content: center;
+}
+.otp-card-input input{
+    width: 55px;
+    height: 65px;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(106, 106, 106);
+}
+.otp-card-input input:focus{
+    outline: 2.3px solid rgb(170, 51, 101);
+    border-color: transparent;
+}
+.otp-card button{
+    background-color: rgb(165, 18, 79);
+    border: none;
+    padding: 15px 25px;
+    color: white;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+.otp-card .deliverable{
+    font-weight: bold;
+    color: rgb(43, 89, 226);
+    text-decoration: underline;
+}
+.otp-card .undeliverable{
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+}
+.otp-card button:hover{
+    opacity: 0.9;
+}
+.otp-card button[disabled]{
+    opacity: 0.6;
+}
+
+@media(max-width: 600px){
+    .otp-card{
+        width: 450px;
+    }
+    .otp-card h1{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .otp-card-input input{
+        width: 50px;
+        height: 63px;
+    }
+}
+@media(max-width: 500px){
+    .otp-card{
+        width: 380px;
+    }
+    .otp-card h1{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .otp-card button{
+        font-size: 15px;
+    }
+    .otp-card-input input{
+        font-size: 25px;
+    }
+}
+@media(max-width: 450px){
+    .otp-card{
+        width: 350px;
+    }
+    .otp-card h1{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .otp-card button{
+        font-size: 15px;
+    }
+    .otp-card-input input{
+        width: 45px;
+        height: 55px;
+    }
+}
+@media(max-width: 400px){
+    .otp-card{
+        width: 310px;
+    }
+}
+@media(max-width: 350px){
+    .otp-card{
+        width: 290px;
+    }
+    .otp-card-input input{
+        width: 45px;
+        height: 55px;
+    }
+    .otp-card-input{
+        gap: 20px;
+    }
+}

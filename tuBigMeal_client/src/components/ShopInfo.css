@@ -1,0 +1,105 @@
+
+.shop-detail{
+    width: 80%;
+    max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: auto 1fr;
+    grid-gap: 50px;
+    overflow-x: hidden;
+    padding: 1rem 0;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+.shop-detail .imgWrapper{
+    width: 100%;
+    max-width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.3);
+    aspect-ratio: 1;
+}
+.shop-detail .imgWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    border-radius: inherit;
+}
+.shop-detail .contentWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    /* background-color: yellow; */
+}
+.shop-detail .contentWrapper h2{
+    font-size: 27px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+.shop-detail .contentWrapper h3{
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: rgb(146, 144, 144);
+    white-space: normal;
+}
+.shop-detail .contentWrapper p{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 550;
+}
+
+@media(max-width: 800px){
+    .shop-detail .imgWrapper{
+        max-width: 180px;
+        max-height: 180px;
+    }
+    .shop-detail .contentWrapper p{
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
+@media(max-width: 600px){
+    .shop-detail{
+        flex-direction: column;
+    }
+}
+@media(max-width: 500px){
+    .shop-detail{
+        width: 85%;
+    }
+    .shop-detail .imgWrapper{
+        max-width: 160px;
+        max-height: 160px;
+    }
+    .shop-detail .contentWrapper h2{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    .shop-detail .contentWrapper h3{
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+@media(max-width: 400px){
+    .shop-detail{
+        padding-top: 2rem;
+    }
+    .shop-detail .contentWrapper h2{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    .shop-detail .contentWrapper h3{
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .shop-detail .contentWrapper p{
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

@@ -1,0 +1,217 @@
+
+.suggestions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    /* background-color: yellow; */
+    width: 100%;
+    margin: 30px auto;
+}
+.suggest-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.suggest-heading h3{
+    font-size: 20px;
+    color: black;
+}
+.suggest-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px 0px;
+    justify-content: center;
+}
+.suggest-box{
+    position: relative;
+    width: 130px;
+    background-color: #ffffff;
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(173, 173, 173, 0.5);
+}
+
+.suggest-image{
+    width: 100%;
+    height: 110px;
+    border: none;
+}
+
+.suggest-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+.suggest-text{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.suggest-text span{
+    height: 100%;
+    padding-right: 10px;
+    color: grey;
+    font-size: 16px;
+}
+.shopName-suggest{
+    height: 100%;
+    color: grey;
+    font-size: 16px;
+}
+.suggest-text .menu-title{
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+}
+.suggest-text .menu-title:hover{
+    color: rgb(255, 86, 34);
+    transition: all ease 0.3s;
+}
+.seeAll-suggestion{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 41px;
+    margin-top: 5px;
+    /* background-color: pink; */
+}
+.seeAll-suggestion button{
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #fc9379, #ffc267);
+    font-weight: 500;
+    box-shadow: 5px 5px 15px rgb(185, 184, 184);
+    cursor: pointer;
+}
+@media (max-width: 1200px) {
+    .suggestions{
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 900px) {
+    .suggestions {
+        max-width: 800px;
+    }
+    .seeAll-suggestion{
+        padding-right: 65px;
+    }
+}
+@media (max-width: 800px) {
+    .suggestions {
+        max-width: 700px;
+    }
+    .seeAll-suggestion{
+        padding-right: 20px;
+    }
+}
+@media (max-width: 700px) {
+    .suggestions {
+        max-width: 600px;
+        margin: 20px auto;
+    }
+    .seeAll-suggestion{
+        padding-right: 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .suggestions {
+        max-width: 500px;
+    }
+    .suggest-container{
+        gap: 20px;
+    }
+    .seeAll-suggestion{
+        padding-right: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .suggestions {
+        padding: 0 20px;
+    }
+    .suggest-container{
+        gap: 15px;
+    }
+    .suggestions {
+        max-width: 450px;
+    }
+    .suggest-box{
+        width: 120px;
+    }
+    .suggest-image{
+        height: 105px;
+    }
+    .suggest-text span, .suggest-text .menu-title{
+        font-size: 15px;
+    }
+    .seeAll-suggestion{
+        padding-right: 30px;
+    }
+    .shopName-suggest{
+        font-size: 14px;
+    }
+}
+@media (max-width: 450px) {
+    .suggestions {
+        max-width: 420px;
+    }
+    .suggest-box{
+        width: 115px;
+    }
+    .suggest-image{
+        height: 100px;
+    }
+    .seeAll-suggestion{
+        padding-right: 10px;
+    }
+    .suggest-container{
+        gap: 10px;
+    }
+}
+@media (max-width: 420px) {
+    .suggestions {
+        max-width: 400px;
+    }
+    .suggest-box{
+        width: 110px;
+    }
+    .suggest-image{
+        height: 100px;
+    }
+}
+@media (max-width: 400px) {
+    .suggestions {
+        padding: 0 10px;
+    }
+    .suggest-box{
+        width: 100px;
+    }
+    .suggest-image{
+        height: 95px;
+    }
+    .suggest-image{
+        height: 95px;
+    }
+    .suggest-text span, .suggest-text .menu-title{
+        font-size: 14px;
+    }
+    .seeAll-suggestion{
+        padding-right: 18px;
+    }
+}

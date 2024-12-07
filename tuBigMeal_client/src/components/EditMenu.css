@@ -1,0 +1,338 @@
+.edit-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+.menu-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu-heading h3{
+    font-size: 1.3rem;
+    color: black;
+}
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px;
+    /* flex-wrap: wrap;  */
+    grid-template-columns: repeat(4,1fr);
+}
+.menu-box{
+    width: 370px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1.5px solid #e0e0e0;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-image{
+    width: 120px;
+    height: 100px;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.menu-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.menu-text{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu-text span{
+    color: grey;
+    font-size: 1rem;
+}
+.menu-text p{
+    font-size: 17px;
+    /* font-weight: bold; */
+    color: black;
+}
+.suggested-menu-tag p{
+    color: rgb(5, 161, 5);
+    font-size: 14px;
+    font-weight: bold;
+}
+.edit-menu-tap{
+    background-color: #e0e0e0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 320px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    z-index: 2;
+}
+.edit-menu-img{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    margin: 10px auto;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+}
+.edit-menu-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu-img-input{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgb(230, 230, 230);
+    width: 30px;
+    height: 30px;
+    line-height: 31px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 36%;
+}
+.menu-img-input input[type='file']{
+    all: unset;
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+.edit-menu-tap p, .addMenu-required-label{
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+.edit-menu-tap input[type='text']{
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+.edit-menu-choices{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+.edit-menu-choices button{
+    width: 20%;
+    font-size: 14px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+}
+.edit-menu-choices button:hover{
+    box-shadow: 0px 6px 8px rgba(0,0,0,0.2);
+}
+.save-edit-menu{
+    background-color: rgb(154, 207, 154);
+}
+.save-edit-menu:hover{
+    background-color: rgb(115, 205, 115);
+}
+.delete-edit-menu{
+    background-color: rgb(238, 118, 105);
+}
+.delete-edit-menu:hover{
+    background-color: rgb(246, 98, 82);
+}
+.close-menu-tap{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 3px;
+    border: none;
+    border-radius:  5px;
+    background-color: black;
+    padding: 5px 7px;
+}
+.close-menu-tap svg{
+    color: white;
+    font-size: 18px;
+}
+.edit-menu-tap input{
+    background-color: #fffdfd;
+    border: none;
+}
+.edit-menu-button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(202, 202, 202);
+    width:35px;
+    height: 35px;
+    border-radius: 17px;
+    cursor: pointer;
+    border: none;
+}
+.edit-menu-button svg{
+    font-size: 16px;
+}
+.edit-menu-radio{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 20px;
+    gap: 12px;
+}
+.edit-menu-radio label{
+    position: relative;
+    color: #7493c3;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid #7493c3;
+    padding: 5px 9px;
+    border-radius: 5px;
+    gap: 8px;
+}
+.edit-menu-radio label::before{
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #7493c3;
+    border-radius: 50%;
+}
+.edit-menu-tap input[type='radio']{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.edit-menu-tap input[type='radio']:checked + label:before{
+    height: 10px;
+    width: 10px;
+    border: 3.5px solid #ffffff;
+    background-color: #7493c3;
+    justify-content: center;
+    align-items: center;
+}
+.edit-menu-tap input[type='radio']:checked + label{
+    background-color: #7493c3;
+    color: #ffffff;
+}
+.confirm-delete-tap{
+    background-color: #353535;
+    max-width: 250px;
+    position: fixed;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    z-index: 3;
+}
+.confirm-delete-tap p{
+    color: white;
+    margin: 10px 0;
+}
+.warning-deleteMenu svg{
+    font-size: 40px;
+    color: rgb(255, 237, 79);
+}
+.confirmDelete-choices{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.confirmDelete-choices button{
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    font-weight: bold;
+    background-color: #a6a5a5;
+    padding: 0 5px;
+}
+.add-menu-box{
+    width: 350px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1.5px solid #e0e0e0;
+    margin: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2.5px dashed rgb(177, 177, 177);
+}
+.add-menu-button{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(218, 216, 216);
+}
+.add-menu-button svg{
+    font-size: 20px;
+    font-weight: bold;
+    color: #464646;
+}
+.required-asterisk{
+    color: rgb(229, 38, 38);
+    font-size: 20px;
+}
+@media(max-width: 500px){
+    .menu-box ,.add-menu-box{
+        width: 350px;
+    }
+}
+@media(max-width: 450px){
+    .menu-box ,.add-menu-box{
+        width: 350px;
+        height: 90px;
+        margin: 5px;
+    }
+    .menu-image{
+        width: 100px;
+        height: 90px;
+    }
+}
+@media(max-width: 375px){
+    .menu-box ,.add-menu-box{
+        width: 340px;
+        height: 90px;
+    }
+}
+@media(max-width: 350px){
+    .menu-box ,.add-menu-box{
+        width: 330px;
+        height: 90px;
+    }
+}
