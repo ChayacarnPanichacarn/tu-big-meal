@@ -34,18 +34,18 @@
 }
 
 @keyframes slide-left {
-    form{
+    from {
         transform: translateX(100%);
     }
-    to{
+    to {
         transform: translateX(0);
     }
 }
 @keyframes slide-right {
-    form{
+    from {
         transform: translateX(-100%);
     }
-    to{
+    to {
         transform: translateX(0);
     }
 }
