@@ -87,7 +87,7 @@ const {Storage} = require('@google-cloud/storage');
 const app = express();
 app.use(express.json());
 // app.use(express.urlencoded({extended: false}));
-app.use(cors({credentials: true, origin: 'http://localhost:5173'})); //might have to change later******************
+app.use(cors({credentials: true, origin: 'https://tu-big-meal.netlify.app'})); ///client side origin ////////////////////////////////////////////////////
 app.use(cookieParser()); //Use cookie-parser middleware
 
 connectDB();
