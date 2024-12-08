@@ -87,7 +87,7 @@ const {Storage} = require('@google-cloud/storage');
 const app = express();
 app.use(express.json());
 // app.use(express.urlencoded({extended: false}));
-app.use(cors({credentials: true, origin: 'https://sprightly-palmier-34767c.netlify.app'})); ///client side origin ////////////////////////////////////////////////////
+app.use(cors({credentials: true, origin: 'https://tiny-monstera-84203e.netlify.app'})); ///client side origin ////////////////////////////////////////////////////
 app.use(cookieParser()); //Use cookie-parser middleware
 
 connectDB();
