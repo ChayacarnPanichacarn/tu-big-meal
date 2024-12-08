@@ -122,11 +122,13 @@ const server_storage = multer.diskStorage({
 // const serviceAccountKey = JSON.parse(process.env.GCS_KEY);
 // const serviceAccountKey = process.env.GCS_KEY;
 
+const private_key = process.env.private_key.replace(/\\n/g, '\n');
+
 const serviceAccountKey = {
     "type": "service_account",
     "project_id": "tu-big-meal",
     "private_key_id": process.env.private_key_id,
-    "private_key": process.env.private_key,
+    "private_key": private_key,
     "client_email": process.env.client_email,
     "client_id": process.env.client_id,
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
@@ -134,7 +136,7 @@ const serviceAccountKey = {
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tubigmealserviceaccount%40tu-big-meal.iam.gserviceaccount.com",
     "universe_domain": "googleapis.com"
-  };
+};
 
 const gcs = new Storage({
     credentials: serviceAccountKey,
