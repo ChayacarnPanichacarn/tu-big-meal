@@ -191,29 +191,35 @@ app.post('/uploadImage', upload.single('image'), async(req, res) => {
         const blob = bucket.file(savedFileName);
         const blobStream = blob.createWriteStream({
             metadata: {
-                contentType: req.file.mimeType
+                contentType: req.file.mimetype,
             }
-        })
+        });
 
         blobStream.on('error', (err) => {
-            res.status(500).send(err);
-        })
+            res.status(500).json({message: `Upload error: ${err.message}`});
+        });
+
         blobStream.on('finish', async() => {
-            //make url public
-            await blob.makePublic();
+            try{
+                //make url public
+                await blob.makePublic();
 
-            const publicUrl = `https://storage.googleapis.com/${bucketName}/${blob.name}`
+                const publicUrl = `https://storage.googleapis.com/${bucketName}/${blob.name}`
 
-            res.status(200).json({
-                message: 'File uploaded succesfully',
-                imageUrl: publicUrl
-            })
-        })
+                res.status(200).json({
+                    message: 'File uploaded succesfully',
+                    imageUrl: publicUrl
+                });
+
+            }catch(err){
+                res.status(500).json({message: `Error making file public: ${err.message}`})
+            }
+        });
 
         blobStream.end(req.file.buffer)
 
     }catch(error){
-        res.status(500).json({message: 'Something went wrong while uploading the file'});
+        res.status(500).json({message: err.message});
     }
 })
 
