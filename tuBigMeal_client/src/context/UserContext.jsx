@@ -12,7 +12,7 @@ export const UserProvider = ({children}) => {
     useEffect(() => {
         const fetchUser = async () => {
             try{
-                const response = await fetch('http://localhost:3000/userInfo',{
+                const response = await fetch('https://tu-big-meal.onrender.com/userInfo',{
                     method: 'GET',
                     credentials: 'include' //Include HttpOnly cookies
                 });

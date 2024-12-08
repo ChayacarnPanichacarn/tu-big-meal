@@ -12,7 +12,7 @@ export default function ResetPassword() {
     const changePassword = async() => {
         try{
             if(newPassword === confirmPassword && newPassword !== ""){
-                const response = await fetch(`http://localhost:3000/changePassword`,{
+                const response = await fetch(`https://tu-big-meal.onrender.com/changePassword`,{
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',

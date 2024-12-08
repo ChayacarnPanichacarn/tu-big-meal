@@ -98,6 +98,9 @@
     box-shadow: 5px 5px 15px rgb(185, 184, 184);
     cursor: pointer;
 }
+.seeAll-suggestion button, .seeAll-suggestion button:focus, .seeAll-suggestion button:active {
+    color: black; 
+}
 @media (max-width: 1200px) {
     .suggestions{
         max-width: 900px;

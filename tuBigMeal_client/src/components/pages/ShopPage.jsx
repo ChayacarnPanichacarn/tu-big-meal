@@ -17,7 +17,7 @@ export default function ShopPage() {
 
       async function fetchSuggestedMenus() {
         const encodedShopName = encodeURIComponent(shop.shopName);
-        const res = await fetch(`http://localhost:3000/suggestedMenusInShop?shopName=${encodedShopName}`);
+        const res = await fetch(`https://tu-big-meal.onrender.com/suggestedMenusInShop?shopName=${encodedShopName}`);
   
         //go fetch data from "index.js" inside node project
   
@@ -29,7 +29,7 @@ export default function ShopPage() {
 
       async function fetchOthersMenus() {
         const encodedShopName = encodeURIComponent(shop.shopName);
-        const res = await fetch(`http://localhost:3000/othersMenusInShop?shopName=${encodedShopName}`);
+        const res = await fetch(`https://tu-big-meal.onrender.com/othersMenusInShop?shopName=${encodedShopName}`);
   
         //go fetch data from "index.js" inside node project
   

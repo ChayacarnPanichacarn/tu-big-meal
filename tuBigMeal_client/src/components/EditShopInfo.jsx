@@ -79,7 +79,7 @@ export default function EditShopInfo(props) {
     
           try{
 
-            const response = await fetch(`http://localhost:3000/uploadImage?fileName=${encodeURIComponent(file.name)}`,{
+            const response = await fetch(`https://tu-big-meal.onrender.com/uploadImage?fileName=${encodeURIComponent(file.name)}`,{
               method: 'POST',
               body: formData
             });
@@ -133,7 +133,7 @@ export default function EditShopInfo(props) {
 
             if(shopName !== shop.shopName && shopName !== "ชื่อร้าน"){
                 try{
-                    const result = await fetch(`http://localhost:3000/editShopNameOnMenus`,{
+                    const result = await fetch(`https://tu-big-meal.onrender.com/editShopNameOnMenus`,{
                         method: 'PATCH',
                         headers: {
                             'Content-Type': 'application/json',
@@ -161,7 +161,7 @@ export default function EditShopInfo(props) {
             try{
 
                 if(Object.keys(editedData).length > 0){
-                    const response = await fetch(`http://localhost:3000/editShop`,{
+                    const response = await fetch(`https://tu-big-meal.onrender.com/editShop`,{
                         method: 'PATCH',
                         headers: {
                             'Content-Type': 'application/json',
@@ -213,7 +213,7 @@ export default function EditShopInfo(props) {
 
             try{
                 if(Object.keys(newData).length > 1){
-                    const response = await fetch(`http://localhost:3000/addShop`,{
+                    const response = await fetch(`https://tu-big-meal.onrender.com/addShop`,{
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

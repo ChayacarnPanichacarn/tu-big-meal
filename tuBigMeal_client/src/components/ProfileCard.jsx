@@ -19,7 +19,7 @@ export default function ProfileCard() {
   const [img, setImg] = useState(user.profilePic === ''? "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" : user.profilePic);
   const [showUploadOptions, setShowUploadOptions] = useState(false);
   
-  window.scrollTo(0,0);
+  // window.scrollTo(0,0);
 
   const handleBrowseFile = async () => {
     const fileInput = document.getElementById("profilePicInput");
@@ -32,7 +32,7 @@ export default function ProfileCard() {
       // formData.append('uploadType','profilePic');
 
       try{
-        const response = await fetch(`http://localhost:3000/uploadImage?fileName=${encodeURIComponent(file.name)}`,{
+        const response = await fetch(`https://tu-big-meal.onrender.com/uploadImage?fileName=${encodeURIComponent(file.name)}`,{
           method: 'POST',
           body: formData,
         });
@@ -69,7 +69,7 @@ export default function ProfileCard() {
       if(imgPath !== "") {editedData.profilePic = imgPath};
 
       if(Object.keys(editedData).length > 0){
-        const response = await fetch(`http://localhost:3000/editProfile`,{
+        const response = await fetch(`https://tu-big-meal.onrender.com/editProfile`,{
           method: 'PATCH',
           headers: {
               'Content-Type': 'application/json',
@@ -88,6 +88,7 @@ export default function ProfileCard() {
         else{
           const data = await response.json();
           // console.log(data);
+          alert('แก้ไขโปรไฟล์สำเร็จ');
           setUser(data.user);
         }
       }

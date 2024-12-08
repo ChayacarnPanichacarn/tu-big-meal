@@ -11,7 +11,7 @@ export default function SignOut() {
 
     const clearUserToken = async() => {
         try{
-            const response = await fetch('http://localhost:3000/logout', {
+            const response = await fetch('https://tu-big-meal.onrender.com/logout', {
                 method: 'POST',
                 credentials: 'include',
             });

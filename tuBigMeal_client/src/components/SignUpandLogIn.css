@@ -37,6 +37,9 @@
     background: rgb(248, 134, 76);
     cursor: pointer;
 }
+.confirm-button, .confirm-button:focus, .confirm-button:active{
+    color: black;
+}
 .confirm-button:hover{
     background: rgb(245, 164, 34);
 }
@@ -51,8 +54,14 @@
   border-radius: 15px;
   border-width: 1.5px;
 }
+.other-option button, .other-option button:focus, .other-option button:active{
+    color: black;
+}
 .account-option{
     margin-bottom: 1.2rem;
+}
+.account-option button, .account-option button:focus, .account-option button:active{
+    color: black;
 }
 .account-choice, .account-choice-click{
     width: 80px;

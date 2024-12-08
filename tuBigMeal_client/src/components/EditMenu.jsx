@@ -28,7 +28,7 @@ export default function EditMenu(props) {
     const fetchAllMenus = useCallback(async() => {
 
         const encodedShopName = encodeURIComponent(shop.shopName);
-        const res = await fetch(`http://localhost:3000/menusInShop?shopName=${encodedShopName}`);
+        const res = await fetch(`https://tu-big-meal.onrender.com/menusInShop?shopName=${encodedShopName}`);
 
         const data = await res.json();
 
@@ -78,7 +78,7 @@ export default function EditMenu(props) {
           const encodedFileName = encodeURIComponent(file.name);
     
           try{
-            const response = await fetch(`http://localhost:3000/uploadImage?fileName=${encodedFileName}`,{
+            const response = await fetch(`https://tu-big-meal.onrender.com/uploadImage?fileName=${encodedFileName}`,{
               method: 'POST',
               body: formData
             });
@@ -112,7 +112,7 @@ export default function EditMenu(props) {
 
         try{
             if(Object.keys(editedData).length > 0){
-                const response = await fetch(`http://localhost:3000/editMenu`,{
+                const response = await fetch(`https://tu-big-meal.onrender.com/editMenu`,{
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ export default function EditMenu(props) {
 
         try{
             
-            const response = await fetch(`http://localhost:3000/addMenu`,{
+            const response = await fetch(`https://tu-big-meal.onrender.com/addMenu`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -183,7 +183,7 @@ export default function EditMenu(props) {
 
     const handleDeleteMenu = async (index) => {
         try{
-            const response = await fetch(`http://localhost:3000/deleteMenu`,{
+            const response = await fetch(`https://tu-big-meal.onrender.com/deleteMenu`,{
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

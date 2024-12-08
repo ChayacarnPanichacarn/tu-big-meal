@@ -20,7 +20,7 @@ export default function SignIn() {
   const handleLogIn = async (gmail, password) => {
 
     try{
-      const response = await fetch(`http://localhost:3000/login?gmail=${gmail}&password=${password}`, {
+      const response = await fetch(`https://tu-big-meal.onrender.com/login?gmail=${gmail}&password=${password}`, {
         method: 'GET',
         credentials: 'include'//include HttpOnly cookies
       });

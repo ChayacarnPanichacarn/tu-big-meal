@@ -28,14 +28,14 @@ export default function Homepage() {
   useEffect(() => {
 
     async function fetchSuggestedMenus() {
-      const res = await fetch('http://localhost:3000/suggestedMenus');
+      const res = await fetch('https://tu-big-meal.onrender.com/suggestedMenus');
 
       const data = await res.json();
       setAllSuggestedMenus(data);
     }
 
     async function fetchAllShops() {
-      const res = await fetch('http://localhost:3000/shops');
+      const res = await fetch('https://tu-big-meal.onrender.com/shops');
 
       const data = await res.json();
       setAllShops(data);
@@ -48,7 +48,7 @@ export default function Homepage() {
   const checkMenus = async(shopName, canteen, category) => {
 
     try{
-      const response = await fetch(`http://localhost:3000/findShopByShopName?shopName=${encodeURIComponent(shopName)}`,{
+      const response = await fetch(`https://tu-big-meal.onrender.com/findShopByShopName?shopName=${encodeURIComponent(shopName)}`,{
           method: 'GET',
           headers:{
               'Content-Type': 'application/json',

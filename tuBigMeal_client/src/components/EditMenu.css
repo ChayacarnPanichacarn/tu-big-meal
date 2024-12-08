@@ -154,15 +154,19 @@
 }
 .save-edit-menu{
     background-color: rgb(154, 207, 154);
+    color: black;
 }
 .save-edit-menu:hover{
     background-color: rgb(115, 205, 115);
+    color: black;
 }
 .delete-edit-menu{
     background-color: rgb(238, 118, 105);
+    color: black;
 }
 .delete-edit-menu:hover{
     background-color: rgb(246, 98, 82);
+    color: black;
 }
 .close-menu-tap{
     position: absolute;
@@ -195,6 +199,11 @@
 }
 .edit-menu-button svg{
     font-size: 16px;
+    color: black;
+}
+.edit-menu-button:active svg, .edit-menu-button:focus svg{
+    font-size: 16px;
+    color: black;
 }
 .edit-menu-radio{
     display: flex;

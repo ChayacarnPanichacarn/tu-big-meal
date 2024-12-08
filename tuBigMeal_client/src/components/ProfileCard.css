@@ -134,6 +134,9 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     cursor: pointer;
 }
+.profile-card .submit-button, .profile-card .submit-button:focus, .profile-card .submit-button:active{
+    color: black;
+}
 @media(max-width: 500px){
     .profile-card{
         width: 350px;

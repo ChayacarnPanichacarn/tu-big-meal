@@ -29,7 +29,7 @@ export default function SignUpandLogIn() {
         try{
             if(email !== ""){
 
-                const res = await fetch(`http://localhost:3000/validateEmail?email=${encodeURIComponent(email)}`,{
+                const res = await fetch(`https://tu-big-meal.onrender.com/validateEmail?email=${encodeURIComponent(email)}`,{
                     method: 'GET',
                     headers:{
                         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export default function SignUpandLogIn() {
                     const OTP = Math.floor(Math.random() * 9000 + 1000);
                     setOTP(OTP);
 
-                    const response = await fetch(`http://localhost:3000/sendRecoveryEmail`,{
+                    const response = await fetch(`https://tu-big-meal.onrender.com/sendRecoveryEmail`,{
                         method: 'POST',
                         headers:{
                             'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ export default function SignUpandLogIn() {
         }
 
         try{
-            const response = await fetch('http://localhost:3000/signup', {
+            const response = await fetch('https://tu-big-meal.onrender.com/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -34,7 +34,7 @@
 }
 
 @keyframes slide-left {
-    form{
+    from {
         transform: translateX(100%);
     }
     to{
@@ -42,7 +42,7 @@
     }
 }
 @keyframes slide-right {
-    form{
+    from {
         transform: translateX(-100%);
     }
     to{

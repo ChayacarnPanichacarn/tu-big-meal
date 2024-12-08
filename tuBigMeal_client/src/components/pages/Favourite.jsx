@@ -13,7 +13,7 @@ export default function Favourite() {
 
       if(user.favourite.length > 0){
         try{
-          const response = await fetch('http://localhost:3000/findMenusByListOfNameAndShop', {
+          const response = await fetch('https://tu-big-meal.onrender.com/findMenusByListOfNameAndShop', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

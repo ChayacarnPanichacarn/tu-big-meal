@@ -16,7 +16,7 @@ export default function EditShop() {
   useEffect(() => {
     async function fetchOwnersShop() {
       try{
-        const res = await fetch(`http://localhost:3000/ownersShop?gmail=${user.gmail}`);
+        const res = await fetch(`https://tu-big-meal.onrender.com/ownersShop?gmail=${user.gmail}`);
         const data = await res.json();
 
         if(res.ok){

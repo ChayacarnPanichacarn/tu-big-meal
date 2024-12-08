@@ -13,7 +13,7 @@ function Suggestions(props) {
 
     const goToShop = async(shopName) => {
 
-        const response = await fetch(`http://localhost:3000/findShopByShopName?shopName=${encodeURIComponent(shopName)}`,{
+        const response = await fetch(`https://tu-big-meal.onrender.com/findShopByShopName?shopName=${encodeURIComponent(shopName)}`,{
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',

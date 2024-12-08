@@ -40,6 +40,9 @@
     background: #ff7480;;
     border-radius: 30px;
 }
+.button-box button, .button-box button:focus, .button-box button:active{
+    color: black;
+}
 
 @media(max-width: 700px){
     .editMode{

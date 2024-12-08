@@ -63,7 +63,7 @@ export default function OTPInput() {
             const OTP = Math.floor(Math.random() * 9000 + 1000);
             setOTP(OTP);
 
-            const response = await fetch(`http://localhost:3000/sendRecoveryEmail`,{
+            const response = await fetch(`https://tu-big-meal.onrender.com/sendRecoveryEmail`,{
                 method: 'POST',
                 headers:{
                     'Content-Type': 'application/json',

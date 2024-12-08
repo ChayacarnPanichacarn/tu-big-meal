@@ -17,7 +17,7 @@ function SearchResults(props) {
             if(!query) return;
 
             const encodedQuery = encodeURIComponent(query);
-            const res = await fetch(`http://localhost:3000/searchMenus?searchQuery=${encodedQuery}`);
+            const res = await fetch(`https://tu-big-meal.onrender.com/searchMenus?searchQuery=${encodedQuery}`);
 
             const data = await res.json();
             setSearchedMenus(data);
@@ -28,7 +28,7 @@ function SearchResults(props) {
 
     const goToShop = async(shopName) => {
 
-        const response = await fetch(`http://localhost:3000/findShopByShopName?shopName=${encodeURIComponent(shopName)}`,{
+        const response = await fetch(`https://tu-big-meal.onrender.com/findShopByShopName?shopName=${encodeURIComponent(shopName)}`,{
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
