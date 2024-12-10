@@ -336,7 +336,8 @@ app.get('/login', async (req,res) => {
         //Set HttpOnly cookie with the token
         res.cookie('authToken', token, {
             httpOnly: true,
-            secure: false,
+            secure: true, //Use secure cookies for HTTPS
+            sameSite: 'None', //Allow cross-origin cookies
             maxAge: 2*60*60*1000 //2hrs
         });
 
@@ -453,7 +454,8 @@ app.patch('/editProfile', async (req, res) => {
 
         res.cookie('authToken', token, {
             httpOnly: true,
-            secure: false,
+            secure: true,
+            sameSite: 'None',
             maxAge: 2*60*60*1000 //2hrs
         });
 
@@ -679,7 +681,8 @@ app.patch('/changePassword', async (req, res) => {
 app.post('/logout',(req, res) => {
     res.clearCookie('authToken',{
         httpOnly: true,
-        secure: false,
+        secure: true,
+        sameSite: 'None',
     });
     res.json({message: "Logged out successfully."});
 })
@@ -735,7 +738,8 @@ app.patch('/editUserFavourite', async (req, res) => {
 
         res.cookie('authToken', token, {
             httpOnly: true,
-            secure: false,
+            secure: true,
+            sameSite: 'None',
             maxAge: 2*60*60*1000 //2hrs
         });
 
